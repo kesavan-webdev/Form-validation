@@ -14,6 +14,12 @@
 :root {
   --ff-roboto: "Roboto", sans-serif;
   --ff-noto-sans: "Noto Sans", sans-serif;
+  --clr-jet: #353535ff;
+  --clr-caribbean-current: #3c6e71ff;
+  --clr-white: #ffffffff;
+  --clr-platinum: #d9d9d9ff;
+  --clr-indigo-dye: #284b63ff;
+
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -103,3 +109,28 @@ p {
 }
 
 /* custom css */
+
+body {
+  background-color: var(--clr-platinum);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 22rem;
+  background-color: var(--clr-jet);
+  padding: 1rem;
+}
+.form-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
