@@ -112,6 +112,7 @@ p {
 
 body {
   background-color: var(--clr-platinum);
+  color: var(--clr-white);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -122,15 +123,28 @@ body {
   width: 22rem;
   background-color: var(--clr-jet);
   padding: 1rem;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
 }
-.form-el {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.input {
+.card-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.form-el {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
+.input {
+  padding: 0.5rem 1rem;
+}
+
+.
