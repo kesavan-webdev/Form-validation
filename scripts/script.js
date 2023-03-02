@@ -24,7 +24,7 @@ const errorFunction = (element, message) => {
   formControl.className = "form-control error";
   let small = formControl.querySelector("small");
   // console.log(small);
-  small.innerText = `${message} is invalid`;
+  small.innerText = `${message} is invalid!`;
 };
 
 //success function
