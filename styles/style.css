@@ -162,4 +162,8 @@ body {
   border-radius: var(--radius);
   box-shadow: var(--dark-shadow);
   border: 2px solid var(--clr-platinum);
+  transition: all 0.3s ease;
+}
+.btn-submit:hover {
+  transform: translateY(10px);
 }
