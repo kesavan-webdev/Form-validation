@@ -120,9 +120,9 @@ body {
   justify-content: center;
 }
 .card {
-  width: 22rem;
+  width: 24rem;
   background-color: var(--clr-jet);
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: var(--dark-shadow);
   border-radius: var(--radius);
 }
@@ -145,6 +145,21 @@ body {
 }
 .input {
   padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--clr-caribbean-current);
+  background-color: var(--clr-indigo-dye);
+  color: var(--clr-white);
+  margin: 0.25rem;
 }
-
-.
+.input::placeholder {
+  color: var(--clr-white);
+}
+.btn-submit {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--clr-platinum);
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  border: 2px solid var(--clr-platinum);
+}
