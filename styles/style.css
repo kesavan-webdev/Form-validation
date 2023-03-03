@@ -169,13 +169,6 @@ body {
   transform: translateY(10px);
   cursor: pointer;
 }
-.form-control.error Input {
-  border-color: red;
-}
-.form-control.success Input {
-  border-color: green;
-}
-
 .form-control small {
   color: red;
   font-size: 0.8rem;
@@ -183,4 +176,10 @@ body {
 }
 .form-control.error small {
   visibility: visible;
+}
+.form-control.error Input {
+  border-color: red;
+}
+.form-control.success Input {
+  border-color: green;
 }

@@ -14,7 +14,14 @@ const formEl = document.getElementById("form");
 // console.log(confirmPasswordEl.value);
 
 //global variables
+const input = [
+  { input: userNameEl, name: "username" },
+  { input: emailEl, name: "Email" },
+  { input: passwordEl, name: "Password" },
+  { input: confirmPasswordEl, name: "Confirm-password" },
+];
 
+console.log(input.length);
 // functions
 
 //error function
@@ -22,7 +29,7 @@ const errorFunction = (element, message) => {
   let formControl = element.parentElement;
   // console.log(formControl);
   formControl.className = "form-control error";
-  let small = formControl.querySelector("small");
+  let small = formControl.querySelector(".small");
   // console.log(small);
   small.innerText = `${message} is invalid!`;
 };
@@ -32,6 +39,9 @@ const successFunction = (element) => {
   let formControl = element.parentElement;
   formControl.className = "form-control success";
 };
+
+//checkRequiredInfo
+function checkRequired(inputArray, message) {}
 // eventListeners
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -39,6 +49,11 @@ formEl.addEventListener("submit", (e) => {
   let email = emailEl.value.trim(); //[ here you will get any value because when
   let password = passwordEl.value.trim(); //  form loading input field values are  filled ]
   let confirmPassword = confirmPasswordEl.value.trim();
+
+  checkRequired(input);
+
+  //input error --> input border red and show invalid message
+  //input success --> input border green only
   if (userName) {
     successFunction(userNameEl);
   } else {
@@ -55,15 +70,23 @@ formEl.addEventListener("submit", (e) => {
     errorFunction(passwordEl, "Password");
   }
   if (confirmPassword) {
-    successFunction(confirmPasswordEl);
+    //password === confirm password
+    if (password === confirmPassword) {
+      successFunction(confirmPasswordEl);
+    } else {
+      errorFunction(
+        confirmPasswordEl,
+        "confirm-password not matched to previous one so it"
+      );
+    }
   } else {
     errorFunction(confirmPasswordEl, "Confirm Password");
   }
 
-  console.log(userName);
-  console.log(email);
-  console.log(password);
-  console.log(confirmPassword);
+  // console.log(userName);
+  // console.log(email);
+  // console.log(password);
+  // console.log(confirmPassword);
 });
 
 // initial setup
